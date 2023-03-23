@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 20px;
 
 }
 
@@ -36,22 +37,9 @@
    font-size: 16px;
   line-height: 22px;
   font-weight: 700;
-
-
-
 }
 .card-footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
-.badge {
-  padding: 5px 10px;
-  background-color: rgb(235, 232, 232);
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-}
-

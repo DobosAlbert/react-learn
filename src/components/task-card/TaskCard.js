@@ -1,29 +1,29 @@
 import "./TaskCard.css";
+import Badge from "../badge/badge";
 
-function create() {
-    return (<div className="card-wrapper">
+function create(props) {
+     return (
+    <div className="card-wrapper">
 
+       <Badge status = {props.status} />
        <div className="card-header">
-        <p className="task-id">T-1</p>
-        <div className="badge">
-            <p>Todo</p>
-        </div>
-        
+        <p className="task-id">{props.data.id}</p>
 
        </div>
        <div className="card-content">
-          <p>Create a Design System for Enum Workspace</p>
+          <p>{props.data.name}</p>
         </div>
         
         <div className="card-footer">   
-            <div>
+            <div className="due-date">
             <p>Due Date</p>
-            <p>23/01/2021</p>
+            <p>{props.data.dueDate}</p>
             </div>
         </div>
 
 
-    </div>);
+    </div>
+    );
 }
 
 export default create;
