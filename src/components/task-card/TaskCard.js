@@ -7,20 +7,19 @@ function create(props) {
 
        <Badge status = {props.status} />
        <div className="card-header">
-        <p className="task-id">{props.data.id}</p>
+        <p className="task-id">{props.id}</p>
 
        </div>
        <div className="card-content">
-          <p>{props.data.name}</p>
+          <p>{props.name}</p>
         </div>
         
         <div className="card-footer">   
             <div className="due-date">
             <p>Due Date</p>
-            <p>{props.data.dueDate}</p>
+            <p>{props.dueDate}</p>
             </div>
         </div>
-
 
     </div>
     );
