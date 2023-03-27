@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./TaskCard.css";
 import Badge from "../badge/badge";
 
 function Create(props) {
-   const [counter, setCounter] = useState(0);
-
-   function handleClick (){
-      setCounter(counter + 1);
-      console.log("Counter update");
-   };
 
 
      return (
@@ -25,12 +19,11 @@ function Create(props) {
         
         <div className="card-footer">   
             <div className="due-date">
-            {/*<p>Due Date</p>*/}
-            <p>{counter}</p>
+            {<p>Due Date</p>}
             <p>{props.dueDate}</p>
-            <button onClick = {handleClick}>Click me</button>
             </div>
         </div>
+        
     </div>
     );
 }

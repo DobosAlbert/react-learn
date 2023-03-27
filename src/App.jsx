@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import TaskCard from './components/task-card/TaskCard';
 import TaskViewer from './components/taskViewer/TaskViewer'
+import FormCard from "./components/forms/Form-card";
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
     <TaskViewer
      TaskList = {data}
     />
+    <FormCard/>
   </div>;
 }
 
