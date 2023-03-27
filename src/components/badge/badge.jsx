@@ -1,4 +1,5 @@
 import "./badge.css";
+import React from 'react';
 
 
 function Badge(props){

@@ -1,7 +1,8 @@
 //import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import TaskCard from './components/task-card/TaskCard.js';
-import TaskViewer from './components/taskViewer/TaskViewer.js'
+import TaskCard from './components/task-card/TaskCard';
+import TaskViewer from './components/taskViewer/TaskViewer'
 
 function App() {
 

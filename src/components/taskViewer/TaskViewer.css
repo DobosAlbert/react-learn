@@ -1,0 +1,15 @@
+.container-view {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container-content {
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .TaskCard {
+    display: inline-block;
+    width: calc(33.33% - 10px);
+    margin: 5px;
+  }
