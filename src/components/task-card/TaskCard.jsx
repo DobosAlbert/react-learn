@@ -3,8 +3,6 @@ import "./TaskCard.css";
 import Badge from "../badge/badge";
 
 function Create(props) {
-
-
      return (
     <div className="card-wrapper">
 

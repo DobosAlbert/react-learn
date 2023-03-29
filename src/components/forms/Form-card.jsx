@@ -1,30 +1,54 @@
 import React, {useState} from 'react';
 import './Form-card.css';
 
-function FormCard() {
+function FormCard(props) {
 
-  const [taskName, setTaskName] = useState("");
-  const [dataTask, setDataTask] = useState("");
-  const [taskDetails, setTaskDetails] = useState("");
+  // const [taskName, setTaskName] = useState("");
+  // const [dataTask, setDataTask] = useState("");
+  // const [taskDetails, setTaskDetails] = useState("");
+
+  const [allDetails, setAllDetails] = useState({
+    name: " ",
+    data: " ",
+    details: " "
+  });
 
 
   const HandleName = (e) => {
-    setTaskName(e.target.value);
+    setAllDetails({
+      ...allDetails,
+      name: e.target.value
+    });
   }
 
   const HandleData = (e) => {
-    setDataTask(e.target.value);
+    setAllDetails({
+      ...allDetails,
+      data: e.target.value
+    });
   }
 
+  const resetForm = () => {
+     allDetails.name = "";
+  };
+
   const HandleDetails = (e) => {
-    setTaskDetails(e.target.value);
+    setAllDetails({
+      ...allDetails,
+      details: e.target.value
+    });
   }
 
   const HandleButton = (e) => {
     e.preventDefault();
-      console.log(taskName);
-        console.log(dataTask);
-          console.log(taskDetails);
+    const newTask = {
+      name: allDetails.name,
+     data: allDetails.data,
+     details: allDetails.details
+    };
+
+    props.addNewTask(newTask);
+    resetForm();
   }
 
   
