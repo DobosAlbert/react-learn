@@ -48,15 +48,23 @@ function App() {
 
   const [formCard, setFormCard] = useState(data);
 
-  function onNewTaskForm(newTask) {
+  const onNewTaskForm = (newTask) => {
     console.log("Task from App.jsx", newTask);
-  }
 
+     setFormCard((prevState) => [
+     ...prevState,
+     {
+      ...newTask,
+      id: "Task-" + prevState.length + 1,
+     },
+    ]);
+  
+   };
 
      
   return <div className='app-container'>
     <TaskViewer
-     TaskList = {data}
+     TaskList = {formCard}
     />
     <FormCard addNewTask = {onNewTaskForm} />
   </div>;
